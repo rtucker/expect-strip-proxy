@@ -1,0 +1,18 @@
+I am expect-strip-proxy.  I strip the Expect: headers off of HTTP requests.
+I do this because some common URL libraries include "Expect: 100-continue"
+when they're sending "large" amounts of data in a POST.  This is all
+well and good, but lighttpd (as included with Ubuntu 8.04, at least) implodes
+when it gets this.  The RFC is a bit of a catch-22, you see: if you don't
+know about the Expect: header, you'll ignore it and everything works fine.
+If you DO know about it and don't support it, you have to supply the
+dreaded 417 Expectation Failed: http://www.flickr.com/photos/apelad/304197810/
+
+Speaking of which, Flickr's blog-posting API does this, which is why I
+wrote this.
+
+Requires twisted, Python, and the editing of the config stuff towards the top.
+
+Read it before you run it.
+
+Questions/comments/zomg-broken: rtucker@gmail.com
+
