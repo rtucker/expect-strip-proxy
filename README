@@ -16,3 +16,17 @@ Read it before you run it.
 
 Questions/comments/zomg-broken: rtucker@gmail.com
 
+
+TODO LIST
+---------
+Outside the Code:
+* Changelog
+* License
+
+Inside the Code:
+* Clean up code
+* Support command line arguments for easier configuration
+* UserAgent check?
+* Document/comment as applicable
+
+
